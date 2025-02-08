@@ -1,0 +1,16 @@
+from . import urls
+<!--creating our own 404 error page-->
+{% extends 'index.html' %}
+{% block title %}<title> Rk 404 Page </title>  {% endblock %}
+{% block content %}
+    <!--<h1 class="text-center mt-5">Hey there!!!we are unable to find the requested page.</h1>-->
+
+    <div class="jumbotron">
+        <h1 class="display-4" style="text-align: center;">404 Error Page</h1>
+        <p class="lead">Hey there!!!we are unable to find the requested page.</p>
+        <hr class="my-4">
+        <p>Please navigae to the home page by clicking the below link</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Click here</a>
+    </div>
+
+  {% endblock %}
